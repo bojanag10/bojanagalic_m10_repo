@@ -1,0 +1,273 @@
+body, html{
+    height: 100%;
+    background-color: #F2F2F2
+  }
+ H1, H2, H3, H4, H5{
+    font-family: 'Poppins', 'sans-serif';
+  }
+  p{
+    font-family: 'Lato'
+  }
+  .navBar{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #082B59;
+    padding: 0.9rem;
+    border-style: solid;
+    border-color: #59331D;
+  }
+  .navContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: white;
+  }
+  .navItem{
+    padding: 0.9rem;
+  }
+  
+  .header{
+    height: 37.5rem;
+  }
+  
+  /* ABOUT SECTION */
+
+
+  .aboutHeader{
+    font-size: 40px;
+    align-items: center;
+    color: #59331D;
+  }
+  
+  .aboutContent{
+    max-width: 1000px;
+    gap: 50px;
+    margin: auto;
+    padding: 40px;
+    display: flex;
+    align-items: flex-start;
+    color: #59331D;
+    justify-content: space-between;
+  }
+  
+  .contactUs{
+    background-color: #59331D;
+    border: 0.125rem white;
+    border-radius: 0rem;
+    color: white;
+    padding: 0.625rem 1.56rem;
+    text-decoration: none;
+    font-size: 1.25rem;
+
+  }
+
+ 
+
+
+
+/*BODY PRODUCTS*/
+   .productHeader{
+    align-items: center;
+    font-size: 40px;
+    color: #59331D;
+  }
+ .containerGrid{
+  color: #59331D;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: 50% 50%;
+  justify-content: space-evenly;
+  align-items: space-evenly;
+  padding: 20px;
+  grid-template-areas:
+    "topLeft topMiddle topRight"
+    "bottomLeft bottomMiddle bottomRight";
+ }
+.topLeft{
+  grid-area: topLeft;
+}
+.topMiddle{
+  grid-area: topMiddle;
+}
+.topRight{
+  grid-area: topRight;
+}
+.bottomLeft{
+  grid-area: bottomLeft;
+}
+.bottomMiddle{
+  grid-area: bottomMiddle;
+}
+.bottomRight{
+  grid-area: bottomRight;
+}
+ 
+
+  /*BODY HOME*/
+
+.homeHeader{
+  font-size: 40px;
+  align-items: center;
+  color: #59331D;
+}
+
+.homeContent{
+  max-width: 1000px;
+  margin: auto;
+  gap: 50px;
+  padding: 40px;
+  display: flex;
+  align-items: flex-start;
+  color: #59331D;
+}
+
+
+
+  /*FOOTER*/
+  .footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #F2F2F2;
+    padding: 1rem;
+  }
+  .socials{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .socials a{
+    color: #59331D;
+    text-decoration: none;
+    font-style: normal;
+    padding: 10px;
+  }
+  
+  
+  /* Media Queries*/
+  @media (max-width: 1024px) {
+    .navContainer {
+      flex-direction: column;
+      align-items: flex-start;
+      font-size: 1.4rem; /* Adjust font size for smaller screens */
+    }
+  
+    .aboutHeader,
+    .homeHeader {
+      font-size: 30px; /* Smaller font size for headers */
+    }
+  
+    .aboutContent,
+    .homeContent {
+      padding: 20px; /* Reduced padding */
+      flex-direction: column; /* Stack content vertically */
+    }
+  
+    .contactUs {
+      font-size: 1rem; /* Adjust button font size */
+      padding: 0.5rem 1rem; /* Adjust padding */
+    }
+  
+    .containerGrid {
+    grid-template-columns: 1fr 1fr; /* Change to a single column layout */
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-content: space-evenly;
+    align-items: space-evenly;
+    grid-template-areas: 
+    'topLeft topMiddle'
+    'topRight bottomLeft'
+    'bottomMiddle bottomRight';
+    gap: 50px;
+    }
+  
+    .footer {
+      flex-direction: column; /* Stack footer items vertically */
+      align-items: center; /* Center items in the footer */
+    }
+  
+    .socials {
+      justify-content: center; /* Center social icons */
+    }
+  
+    .socials a {
+      padding: 5px; /* Adjust padding for social links */
+    }
+  }
+
+
+
+
+
+
+
+  @media (max-width: 768px) {
+    .navContainer {
+      flex-direction: column; /* Stack items vertically */
+      align-items: flex-start; /* Align to the left */
+      font-size: 1.2rem; /* Smaller font size */
+    }
+  
+    .aboutHeader,
+    .homeHeader {
+      font-size: 24px; /* Further reduced font size for headers */
+    }
+  
+    .aboutContent,
+    .homeContent {
+      padding: 15px; /* Further reduced padding */
+      flex-direction: column; /* Stack content vertically */
+    }
+  
+    .contactUs {
+      font-size: 1rem; /* Keep button font size smaller */
+      padding: 0.5rem; /* Adjust padding */
+    }
+  
+    .containerGrid {
+      grid-template-columns: 1fr; /* Single column layout */
+      grid-template-rows: auto; /* Automatic row height */
+    }
+    .productsHeader {
+      font-size: 24px; /* Reduced font size for smaller screens */
+      text-align: center; /* Center the text for better readability */
+    }
+  
+    .containerGrid {
+      grid-template-columns: 1fr; /* Change to a single column layout */
+      grid-template-areas: 
+      'topLeft'
+      'topMiddle'
+      'topRight'
+      'bottomLeft'
+      'bottomMiddle'
+      'bottomRight';
+      grid-template-rows: auto; /* Automatic row height */
+      padding: 10px; /* Reduce padding */
+      align-items: center; /* Center items in grid */
+    }
+  
+    /* Optional: Adjust individual grid items if needed */
+    .topLeft,
+    .topMiddle,
+    .topRight,
+    .bottomLeft,
+    .bottomMiddle,
+    .bottomRight {
+      padding: 10px; /* Add padding for individual items */
+      text-align: center; /* Center text in grid items */
+    }
+  }
+  
+    .footer {
+      flex-direction: column; /* Stack footer items vertically */
+      align-items: center; /* Center items in the footer */
+    }
+  
+    .socials a {
+      padding: 8px; /* Adjust padding for social links */
+    }
+  
